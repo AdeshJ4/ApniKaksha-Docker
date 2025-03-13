@@ -16,8 +16,8 @@ COPY package.json ./
 # Install dependencies inside the container
 RUN npm install
 
-# Copy all other project files (server.js, etc.)
-COPY . ./
+# Copy all other project files (server.js, etc.)   In Docker, . and ./ are the same. Refers to the current directory.
+COPY . . 
 
 # Expose port 5000 (to match ENV PORT)
 EXPOSE 5000
